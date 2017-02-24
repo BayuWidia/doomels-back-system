@@ -90,7 +90,7 @@
     <div class="col-md-12">
       <div class="box box-danger">
         <div class="box-header">
-          <a href="{{route('drdoomels.tambah')}}" class="btn bg-navy btn-flat margin">Tambah Berita</a>
+          <a href="{{route('drdoomels.tambah')}}" class="btn bg-blue btn-flat margin">Tambah Berita</a>
         </div><!-- /.box-header -->
         <div class="box-body">
           <table id="tabelinfo" class="table table-hover">

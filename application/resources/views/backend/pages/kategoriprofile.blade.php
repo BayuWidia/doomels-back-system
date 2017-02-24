@@ -155,7 +155,7 @@
         <div class="box-body no-padding">
           <table class="table table-hover">
             <tbody>
-              <tr class="bg-green">
+              <tr class="bg-red">
                 <th style="width:10px;">#</th>
                 <th>Nama Kategori</th>
                 <th>Keterangan</th>

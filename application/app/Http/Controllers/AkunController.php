@@ -12,14 +12,15 @@ use App\Models\User;
 use App\Models\Berita;
 use App\Models\Slider;
 use App\Http\Requests;
-use App\Models\MasterSKPD;
 
 class AkunController extends Controller
 {
   public function index()
   {
+    // dd("asdas");
     $getuser = User::get();
-    return view('backend/pages/kelolaakun', compact('getuser'));
+    // $getslider = Slider::get();
+     return view('backend/pages/kelolaakun')->with('getuser', $getuser);
   }
 
   public function store(Request $request)

@@ -42,7 +42,7 @@ class KategoriTravellerController extends Controller
       }
       $get->save();
       return redirect()->route('traveller.kategori.index')->with('message', 'Berhasil mengubah status kategori.');    
-    } else {
+
   }
 
   public function edit(Request $request)

@@ -1,8 +1,3 @@
-<style type="text/css">
-  #colortreemenulihref{
-      color: #000000;
-    }
-</style>
 <section class="sidebar">
   <!-- Sidebar user panel -->
   <div class="user-panel">
@@ -14,14 +9,14 @@
       @endif
     </div>
     <div class="pull-left info">
-      <p style="color:black">
+      <p>
         @if(Auth::user()->name=="")
           {{Auth::user()->email}}
         @else
           {{Auth::user()->name}}
         @endif
       </p>
-      <a href="#" style="color:black"><i class="fa fa-circle text-success"></i>
+      <a href="#"><i class="fa fa-circle text-success"></i>
         {{Auth::user()->email}}
       </a>
     </div>
@@ -40,13 +35,13 @@
   <ul class="sidebar-menu">
     <li class="header">MAIN NAVIGATION</li>
     <li>
-      <a href="{{url('backend/dashboard')}}" id="colortreemenulihref">
+      <a href="{{url('backend/dashboard')}}" >
         <i class="fa fa-dashboard"></i> <span>Dashboard</span>
       </a>
     </li>
    @if(Auth::user()->level=="1")
     <li class="treeview">
-      <a href="#" id="colortreemenulihref">
+      <a href="#" >
         <i class="fa fa-star"></i>
         <span>Profile Doomels</span>
         <i class="fa fa-angle-left pull-right"></i>
@@ -58,7 +53,7 @@
     </li>
     @endif
     <li class="treeview">
-      <a href="#" id="colortreemenulihref">
+      <a href="#" >
         <i class="fa fa-black-tie"></i>
         <span>Doctor Doomels</span>
         <i class="fa fa-angle-left pull-right"></i>
@@ -69,7 +64,7 @@
       </ul>
     </li>
     <li class="treeview">
-      <a href="#" id="colortreemenulihref">
+      <a href="#" >
         <i class="fa fa-newspaper-o"></i>
         <span>Artikel</span>
         <i class="fa fa-angle-left pull-right"></i>
@@ -79,8 +74,8 @@
         <li><a href="{{route('news.kategori.index')}}"><i class="fa fa-circle-o"></i> Tambah Kategori Artikel</a></li>
       </ul>
     </li>
-    <!-- <li class="treeview">
-      <a href="#" id="colortreemenulihref">
+    <li class="treeview">
+      <a href="#" >
         <i class="fa fa-bicycle"></i>
         <span>Traveller</span>
         <i class="fa fa-angle-left pull-right"></i>
@@ -91,7 +86,7 @@
       </ul>
     </li>
     <li class="treeview">
-      <a href="#" id="colortreemenulihref">
+      <a href="#" >
         <i class="fa fa-camera"></i>
         <span>Hobby</span>
         <i class="fa fa-angle-left pull-right"></i>
@@ -102,7 +97,7 @@
       </ul>
     </li>
     <li class="treeview">
-      <a href="#" id="colortreemenulihref">
+      <a href="#" >
         <i class="fa fa-odnoklassniki"></i>
         <span>Cebok (Cerita Bokap)</span>
         <i class="fa fa-angle-left pull-right"></i>
@@ -111,9 +106,9 @@
           <li><a href="{{route('cebok.lihat')}}"><i class="fa fa-circle-o"></i> List Data Cebok</a></li>
           <li><a href="{{route('cebok.kategori.index')}}"><i class="fa fa-circle-o"></i> Tambah Kategori Cebok</a></li>
       </ul>
-    </li> -->
+    </li>
     <li class="treeview">
-      <a href="#" id="colortreemenulihref">
+      <a href="#" >
         <i class="fa fa-code-fork"></i>
         <span>Bagi Pengetahuan</span>
         <i class="fa fa-angle-left pull-right"></i>
@@ -123,9 +118,9 @@
         <li><a href="{{route('pengetahuan.kategori.index')}}"><i class="fa fa-circle-o"></i> Tambah Kategori Pengetahuan</a></li>
       </ul>
     </li>
-   @if(Auth::user()->level=="1")
+    @if(Auth::user()->level=="1")
       <li class="treeview">
-        <a href="#" id="colortreemenulihref">
+        <a href="#" >
           <i class="fa fa-users"></i>
           <span>Manajemen Akun</span>
           <i class="fa fa-angle-left pull-right"></i>
@@ -135,7 +130,7 @@
         </ul>
       </li>
     <li class="treeview">
-      <a href="#" id="colortreemenulihref">
+      <a href="#" >
         <i class="fa fa-image"></i>
         <span>Galeri & Slider</span>
         <i class="fa fa-angle-left pull-right"></i>

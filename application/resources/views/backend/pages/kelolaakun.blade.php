@@ -20,13 +20,13 @@
 @section('content')
   <script>
     window.setTimeout(function() {
-      $(".alert-success").fadeTo(500, 0).slideUp(500, function(){
+      $(".alert-info").fadeTo(500, 0).slideUp(500, function(){
           $(this).remove();
       });
     }, 2000);
 
     window.setTimeout(function() {
-      $(".alert-danger").fadeTo(500, 0).slideUp(500, function(){
+      $(".alert-warning").fadeTo(500, 0).slideUp(500, function(){
           $(this).remove();
       });
     }, 5000);
@@ -125,7 +125,7 @@
   <div class="row">
     <div class="col-md-12">
       @if(Session::has('message'))
-        <div class="alert alert-success">
+        <div class="alert alert-info">
           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
           <h4><i class="icon fa fa-check"></i> Berhasil!</h4>
           <p>{{ Session::get('message') }}</p>
@@ -133,7 +133,7 @@
       @endif
 
       @if(Session::has('messagefail'))
-        <div class="alert alert-danger">
+        <div class="alert alert-warning">
           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
           <h4><i class="icon fa fa-ban"></i> Oops, terjadi kesalahan!</h4>
           <p>{{ Session::get('messagefail') }}</p>
@@ -144,9 +144,9 @@
     <form class="form-horizontal" method="post" action="{{route('akun.store')}}" enctype="multipart/form-data">
       {{ csrf_field() }}
         <div class="col-md-4">
-          <div class="box box-success">
+          <div class="box box-danger">
             <div class="box-header with-border">
-                <h3 class="box-title">Formulir Tambah Akun Doomels</h3>
+                <h3 class="box-title">Formulir Tambah Akun 9 tins</h3>
             </div>
             <div class="box-body">
               <div class="col-md-14 {{ $errors->has('email') ? 'has-error' : '' }}">
@@ -175,6 +175,7 @@
                   </span>
                 @endif
               </div>
+
               <div class="col-md-14 {{ $errors->has('level') ? 'has-error' : '' }}">
                 <label class="control-label">Level</label>
                 <select class="form-control" name="level" id="leveluser">
@@ -191,7 +192,6 @@
               <div class="col-md-14 {{ $errors->has('url_foto') ? 'has-error' : '' }}">
                 <label class="control-label">Pilih Foto</label>
                 <input type="file" name="url_foto" accept=".jpg, .png, .bmp">
-                <font color="red"><small>*Ukuran Foto 128px X 128px</small></font>
                 @if($errors->has('url_foto'))
                   <span class="help-block">
                     <strong>{{ $errors->first('url_foto')}}
@@ -199,6 +199,7 @@
                   </span>
                 @endif
               </div>
+              <span class="text-muted"><i>* Rekomendasi ukuran terbaik: 480 X 495px.</i></span>
               <div class="col-md-14 {{ $errors->has('password') ? 'has-error' : '' }}">
                 <label class="control-label">Password</label>
                 <input type="password" name="password" class="form-control" placeholder="Password"
@@ -223,10 +224,10 @@
     <!-- END FORM-->
     <!-- START TABLE-->
     <div class="col-md-8">
-      <div class="box box-success">
+      <div class="box box-danger">
         <div class="box-header with-border">
           <div class="box-title">
-            Seluruh Data Akun Doomels
+            Seluruh Data Akun 9 tins
           </div>
         </div>
         <div class="box-body">
@@ -261,7 +262,7 @@
                         <i class="fa fa-thumbs-down"></i>
                       </span>
                     @elseif($key->activated=="1")
-                      <span class="badge bg-green" data-toggle="tooltip" title="Aktif">
+                      <span class="badge bg-blue" data-toggle="tooltip" title="Aktif">
                         <i class="fa fa-thumbs-up"></i>
                       </span>
                     @endif
@@ -284,11 +285,6 @@
             </tbody>
           </table>
         </div>
-        <!-- <div class="box-footer">
-          <ul class="pagination pagination-sm no-margin pull-right">
-            {{ $getuser->links() }}
-          </ul>
-        </div> -->
       </div>
     </div>
     <!-- START TABLE-->
